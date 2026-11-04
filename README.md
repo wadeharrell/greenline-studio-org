@@ -7,3 +7,4 @@ Right now it is a one-page placeholder. Later, a GitHub Action will pull the cor
 - `CNAME`: the custom domain (greenline-studio.org). greenlinestudio.org forwards to it from Squarespace.
 - `.nojekyll`: serve the files as they are, without a Jekyll build.
 - Icons and the social image come from the Greenline Studio brand kit.
+- `fonts/`: Manrope (500, 800) and IBM Plex Mono (500), Latin subset, served from this site so pages make no request to any other server. Both are under the SIL Open Font License 1.1; the licences are beside them.
