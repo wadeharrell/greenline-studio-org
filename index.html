@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Greenline Studio</title>
+<meta name="description" content="Greenline Studio: greenlight every shot on the timeline. Open-source studio for AI-made episodic channels. Docs coming soon.">
+<meta property="og:title" content="Greenline Studio">
+<meta property="og:description" content="Greenlight every shot on the timeline. Open-source studio for AI-made episodic channels.">
+<meta property="og:image" content="https://greenline-studio.org/og-image.png">
+<meta property="og:url" content="https://greenline-studio.org/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0C1411">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/icon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Manrope:wght@500;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --night: #0C1411; --green: #3BE07A; --paper: #ECF5EF;
+    --pending: #2B4A3C; --track: #1C2A24; --muted: #8FA79A;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { height: 100%; }
+  body {
+    background: var(--night); color: var(--paper);
+    font-family: Manrope, system-ui, sans-serif; font-weight: 500;
+    display: flex; flex-direction: column; min-height: 100vh;
+    padding: 0 16px;
+  }
+  main {
+    flex: 1; display: flex; flex-direction: column; align-items: center;
+    justify-content: center; text-align: center; gap: 28px; padding: 48px 0;
+  }
+  .mark { width: min(260px, 60vw); height: auto; }
+  .playhead { animation: roll 2.4s cubic-bezier(.3,.7,.3,1) .3s both; }
+  .lit { animation: fill 2.4s cubic-bezier(.3,.7,.3,1) .3s both; transform-origin: 14px 154px; }
+  @keyframes roll { from { transform: translateX(-122px); } to { transform: none; } }
+  @keyframes fill { from { transform: scaleX(.13); } to { transform: none; } }
+  @media (prefers-reduced-motion: reduce) { .playhead, .lit { animation: none; } }
+  h1 { font-weight: 800; font-size: clamp(2.4rem, 8vw, 4.5rem); letter-spacing: -0.02em; line-height: 1.05; }
+  h1 span { color: var(--green); }
+  .tag { font-size: clamp(1.05rem, 2.6vw, 1.3rem); color: var(--paper); opacity: .85; max-width: 34ch; line-height: 1.5; }
+  .sub { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: clamp(.85rem, 2vw, .95rem); color: var(--muted); margin-top: -16px; }
+  .soon {
+    font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: .85rem;
+    letter-spacing: .08em; text-transform: uppercase; color: var(--green);
+    border: 1px solid var(--pending); border-radius: 999px; padding: 8px 16px;
+  }
+  footer {
+    font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: .75rem;
+    color: var(--muted); text-align: center; padding: 20px 0 28px;
+    border-top: 1px solid var(--track);
+  }
+</style>
+</head>
+<body>
+<main>
+  <svg class="mark" viewBox="0 40 260 150" role="img" aria-label="Greenline Studio mark: shots on a timeline, the playhead past two green clips">
+    <rect x="14" y="150" width="232" height="8" rx="4" fill="#1C2A24"/>
+    <rect x="22" y="100" width="64" height="44" rx="8" fill="#3BE07A"/>
+    <rect x="94" y="100" width="56" height="44" rx="8" fill="#3BE07A"/>
+    <rect x="158" y="100" width="80" height="44" rx="8" fill="#2B4A3C"/>
+    <rect class="lit" x="14" y="150" width="140" height="8" rx="4" fill="#3BE07A"/>
+    <g class="playhead">
+      <rect x="150" y="62" width="8" height="122" rx="4" fill="#ECF5EF"/>
+      <path d="M138 50 h32 l-16 20z" fill="#ECF5EF"/>
+    </g>
+  </svg>
+  <h1>Greenline <span>Studio</span></h1>
+  <p class="tag">Greenlight every shot on the timeline.</p>
+  <p class="sub">Open-source studio for AI-made episodic channels</p>
+  <p class="soon">Docs coming soon</p>
+</main>
+<footer>greenline-studio.org &middot; &copy; 2026 Wade Harrell</footer>
+</body>
+</html>
